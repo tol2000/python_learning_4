@@ -25,5 +25,17 @@ if __name__ == '__main__':
     # resp = requests.get('http://httpbin.org/get')
     # pprint(resp.json())
 
-    resp = requests.post('http://httpbin.org/post')
+    headers = {
+        "Content-type": "application/json",
+        "MySecretHeader": "Balls and eggs! :)"
+    }
+
+    data = {
+        "Tolyan": "Is a cool man! :)!",
+        "What?": "forty two of course!"
+    }
+
+    resp = requests.post('http://httpbin.org/post', headers=headers, json=data)
     pprint(resp.json())
+    print("-----------------------------")
+    pprint(resp.json()["json"])

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tolyan's mega web server! :)</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/main.css')}}">
+</head>
+<body>
+    <div> Bla-bla-bla! </div>
+    <div> <a href="{{url_for('static', filename='pages/page1.html')}}">Page1</a> </div>
+    <div> <a href="{{url_for('static', filename='pages/page2.html')}}">Странн2</a> </div>
+    <div> <a href="{{url_for('hello_name', name='Tolic')}}">Hello, Tol!</a> </div>
+    <div>--------------------------------------</div>
+    {% for x in pages.keys() %}
+    <div>{{x}}</div>
+    {% endfor %}
+    <div>--------------------------------------</div>
+    <div> {{pages}} </div>
+</body>
+</html>

@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Странница 2</title>
+    <title>Article # {{a_id}}</title>
     <link rel="icon" href="{{url_for('static', filename='favicon.ico')}}">
-    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/main.css')}}">
 </head>
 <body>
     <div> <a href="/"><h4>Home</h4></a> </div>
-    Странствие странницы 2... :)
+    <h3>Invalid article # {{a_id}}</h3>
 </body>
 </html>

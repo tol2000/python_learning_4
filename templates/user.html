@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User request</title>
+    <link rel="icon" href="{{url_for('static', filename='favicon.ico')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/main.css')}}">
+</head>
+<body>
+    <div> <a href="/"><h4>Home</h4></a> </div>
+    <div>Request contents:</div>
+    <br>
+    {% for x in user_request_contents %}
+    <div>--------------------------------------</div>
+    <div> {{x}} </div>
+    {% endfor %}
+    <br><br>
+    <form method="POST">
+        <h5>Your name</h5> <input type="text" name="f_name">
+        <input type="submit">
+    </form>
+    {% if user_name %}
+    <div>--------------------------------------</div>
+    <div><h3>User name is {{user_name}}</h3></div>
+    {% endif %}
+</body>
+</html>
